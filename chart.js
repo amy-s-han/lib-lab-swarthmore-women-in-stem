@@ -1,6 +1,105 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
 	console.log("hellololol?")
+
+	var undergradChart = c3.generate({
+		bindto: '#undergradChart',
+		data: {
+			columns: [
+				["Women", 823],
+				["Men", 796]
+			],
+			type: 'donut'
+		},
+		donut: {
+        	title: "Undergrad Total: 1620"
+    	},
+    	
+	});
+
+	var facultyChart = c3.generate({
+		bindto: '#facultyChart',
+		data: {
+			columns: [
+				["Women", 102],
+				["Men", 118]
+			],
+			type: 'donut',	
+		},
+		donut: {
+        	title: "Faculty Total: 220"
+    	}
+	});
+
+	var top5PopMajors = c3.generate({
+		bindto: '#top5PopMajors',
+		data: {
+			columns: [
+				["Economics", 16.4],
+				["Political Science", 12.8],
+				["Biology", 12],
+				["Computer Science", 10.6],
+				["Mathematics", 8.1],
+				["Other", 40.1]
+			],
+			type: 'donut'
+		},
+		donut: {
+			title: "Top 5 Majors"
+		}
+	});
+
+	var STEMnonSTEM = c3.generate({
+		bindto: '#STEMnonSTEM',
+		data: {
+			columns: [
+				["STEM", 140],
+				["Non STEM", 261]
+
+			],
+			type: 'donut'
+		},
+		donut: {
+			title: "STEM / Non-STEM Majors"
+		}
+	});
+
+	var majorDivisions = c3.generate({
+		bindto: '#majorDivisions',
+		data: {
+			columns: [
+				["Social Science", 50],
+				["Natural Science and Engineering", 37],
+				["Humanities", 21],
+				["Across Divisions", 12]
+
+			],
+			type: 'donut'
+		},
+		donut: {
+			title: "One or more majors*"
+		}
+	});
+
+	var STEMmajors = c3.generate({
+		bindto: '#STEMMajors',
+		data: {
+			columns: [
+				["Biology", 42],
+				["Chemistry", 10],
+				["Computer Science", 37],
+				["Engineering", 24],
+				["Mathematics", 24],
+				["Physics", 3],
+				["Other STEM", 18]
+			],
+			type: 'donut'
+		},
+		donut: {
+			title: "STEM Majors"
+		}
+	})
+
     var engineChart = c3.generate({
 	    bindto: '#engineeringChart',
 	    data: {

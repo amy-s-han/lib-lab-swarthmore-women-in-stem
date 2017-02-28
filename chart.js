@@ -215,3 +215,12 @@ $( document ).ready(function() {
 	}, 6000);
 });
 
+
+
+var waypoint = new Waypoint({
+  element: document.getElementById('engineeringChart'),
+  handler: function() {
+    console.log("here at engin chart")
+  }
+})
+
